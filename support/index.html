@@ -6,28 +6,14 @@
   <title>Support | 7envelopes</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="content-page">
-  <main class="card">
-    <a class="back-link" href="../">← 7envelopes</a>
-    <h1>Support</h1>
-    <p>Describe the problem you encountered or a feature you would like to request.</p>
-    <form id="support-form">
-      <label>Email address<input id="email" type="email" required autocomplete="email"></label>
-      <label>Subject<input id="subject" type="text" required></label>
-      <label>Description<textarea id="description" rows="7" required></textarea></label>
-      <button type="submit">Submit</button>
-    </form>
-    <p class="form-note">Submitting opens your email app with this message prepared.</p>
+<body>
+  <main class="document-shell">
+    <section class="document-card">
+      <a class="back-link" href="../">← 7envelopes</a>
+      <h1>Support</h1>
+      <p>For help, questions, or feature requests, email 7envelopes support.</p>
+      <p><a href="mailto:support@7envelopes.app?subject=7envelopes%20Support">Email Support</a></p>
+    </section>
   </main>
-  <script>
-    document.getElementById("support-form").addEventListener("submit", function (event) {
-      event.preventDefault();
-      var email = document.getElementById("email").value;
-      var subject = document.getElementById("subject").value;
-      var description = document.getElementById("description").value;
-      var body = "From: " + email + "\n\n" + description;
-      window.location.href = "mailto:support@7envelopes.app?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    });
-  </script>
 </body>
 </html>
